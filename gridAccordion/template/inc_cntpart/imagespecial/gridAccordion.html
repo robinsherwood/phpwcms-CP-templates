@@ -1,0 +1,33 @@
+<!--IMAGES_HEADER_START//-->
+
+
+[TITLE]<h3>{TITLE}</h3>[/TITLE]
+[SUBTITLE]<h4>{SUBTITLE}</h4>[/SUBTITLE]
+[TEXT]{TEXT}[/TEXT]
+
+
+       <ul class="accordion">
+
+<!--IMAGES_HEADER_END//-->
+
+
+<!--IMAGES_ENTRY_START//-->
+ <li> [ZOOM]<a href="{IMAGE_ABS}" {LIGHTBOX_CAPTION}target="_blank"{LIGHTBOX}><img src="{THUMB_ABS}" alt="{THUMB_NAME}" border="0" /></a>
+[/ZOOM][ZOOM_ELSE]
+  [IMAGE_URL]<a href="{IMAGE_URL}"{IMAGE_TARGET}>[/IMAGE_URL]<img src="{THUMB_ABS}" alt="{THUMB_NAME}" border="0" />[IMAGE_URL]</a>[/IMAGE_URL]
+[/ZOOM_ELSE]      </li>
+<!--IMAGES_ENTRY_END//-->
+
+
+<!--IMAGES_ENTRY_SPACER_START//--><!--IMAGES_ENTRY_SPACER_END//-->
+
+
+<!--IMAGES_ROW_SPACER_START//--><!--IMAGES_ROW_SPACER_END//-->
+
+
+<!--IMAGES_FOOTER_START//-->
+   </ul>
+
+
+
+<!--IMAGES_FOOTER_END//-->
