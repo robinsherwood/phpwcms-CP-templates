@@ -1,0 +1,69 @@
+<!--TABS_START//-->
+[TITLE]<h3>{TITLE}</h3>[/TITLE]
+[SUBTITLE]<h4>{SUBTITLE}</h4>[/SUBTITLE]
+[TABS_ENTRIES]
+
+<!-- JS:
+$(function() {
+
+	$('#st-accordion_{ID}').accordion({
+		oneOpenedItem	: true
+	});
+
+});
+-->
+
+<!-- JS:
+jQuery(document).ready(function(){
+		var act = 0;
+		$( '#st-accordion_{ID}' ).st-open({
+			create: function(event, ui) {
+				//get index in cookie on accordion create event
+				if($.cookie('saved_index') != null){
+					act =  parseInt($.cookie('saved_index'));
+							}
+							},
+				change: function(event, ui) {
+					//set cookie for current index on change event
+						$.cookie('saved_index', null);
+						$.cookie('saved_index', ui.options.active);
+							},
+						active:parseInt($.cookie('saved_index'))
+		});
+});
+-->
+
+<div id="st-accordion_{ID}" class="st-accordion"><ul>{TABS_ENTRIES}</ul></div>
+
+
+<!-- JS: template/lib/FlexibleSlideToTopAccordion/js/jquery.accordion-slide-to-top.js -->
+<!-- JS: template/lib/FlexibleSlideToTopAccordion/js/jquery.easing.min.js -->
+
+
+<!-- CSS: template/lib/FlexibleSlideToTopAccordion/css/FlexibleSlideToTopAccordion-style.css -->
+<!-- CSS:
+.st-accordion ul li{height:auto;}
+/*.st-accordion ul li > a span{visibility:hidden;}*/
+-->
+
+[/TABS_ENTRIES]
+<!--TABS_END//-->
+
+<!--TABS_ENTRY_START//-->
+[TABCONTENT]
+
+	<li>
+
+    <a href="#">{TABTITLE}<span class="st-arrow">Open or Close</span></a>
+      <div class="st-content">
+
+				<div class="accordion-content-padding">
+				[TABHEADLINE]<h4>{TABHEADLINE}</h4>[/TABHEADLINE]
+				[TABTEXT]{TABTEXT}[/TABTEXT]
+				</div>
+			</div>
+
+	</li>
+
+[/TABCONTENT]
+<!--TABS_ENTRY_END//-->
